@@ -279,6 +279,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml
 
+# Blur
+ifneq ($(TARGET_SUPPORTS_BLUR),false)
+PRODUCT_PRODUCT_PROPERTIES += ro.surface_flinger.supports_background_blur=1
+endif
 
 # Translations
 CUSTOM_LOCALES += \
