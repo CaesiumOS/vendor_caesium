@@ -135,9 +135,6 @@ endif
 # Bootanimation
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
-PRODUCT_PACKAGES += \
-    bootanimation.zip \
-    bootanimation-dark.zip
 
 # Lineage interfaces
 PRODUCT_PACKAGES += \
@@ -284,7 +281,6 @@ PRODUCT_COPY_FILES += \
 
 # Enable Material Design 3 Expressive
 PRODUCT_PRODUCT_PROPERTIES += is_expressive_design_enabled=true
-
 
 # Blur
 ifneq ($(TARGET_SUPPORTS_BLUR),false)
