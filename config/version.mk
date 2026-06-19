@@ -1,6 +1,6 @@
 PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 5
-PRODUCT_VERSION_PATCH = 5
+PRODUCT_VERSION_PATCH = 6
 PRODUCT_VERSION_CODENAME = Bellevue
 PRODUCT_VERSION_RELEASETRACK = Stable
 
@@ -22,11 +22,15 @@ LINEAGE_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_V
 # Display version
 LINEAGE_DISPLAY_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
 
-# LineageOS version properties
+# CaesiumOS version properties
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.lineage.version=$(LINEAGE_VERSION) \
     ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
     ro.caesium.codename=$(PRODUCT_VERSION_CODENAME) \
-    ro.caesium.track=$(PRODUCT_VERSION_RELEASETRACK)
+    ro.caesium.track=$(PRODUCT_VERSION_RELEASETRACK) \
+    ro.caesium.version=$(LINEAGE_VERSION) \
+    ro.caesium.version.display=$(LINEAGE_DISPLAY_VERSION) \
+    ro.caesium.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.caesium.releasetype=$(LINEAGE_BUILDTYPE)
